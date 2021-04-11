@@ -1,0 +1,14 @@
+--By Kaldr
+--Profile: https://v3rmillion.net/member.php?action=profile&uid=1110292
+for i,v in pairs(game:GetService("Players")["LocalPlayer"].Character:GetDescendants()) do
+if v.Name == "KOd" and v:IsA("BoolValue") then
+v:Destroy()
+end
+end
+
+game:GetService("Players")["LocalPlayer"].Character.DescendantAdded:Connect(function(obj)
+if obj:IsA("BoolValue") and obj.Name == "KOd" then
+wait()
+obj:Destroy()
+end
+end)
